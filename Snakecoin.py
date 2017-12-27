@@ -40,12 +40,11 @@ blockchain = [create_genesis_block()]
 previous_block = blockchain[0]
 
 # Definite the number of blocks to be added
-num_of_blocks_to_add = 20
+num_of_blocks_to_add = 2000
 
 # Add blocks to the chain
 for i in range(0, num_of_blocks_to_add):
     block_to_add = next_block(previous_block)
     blockchain.append(block_to_add)
     previous_block = block_to_add
-    print("Block #{} has been added to the bloackchain!".format(block_to_add.index))
-    print(block_to_add.hash)
+    print("Block #{} has been added to the bloackchain! \n{}".format(block_to_add.index, block_to_add.hash))
